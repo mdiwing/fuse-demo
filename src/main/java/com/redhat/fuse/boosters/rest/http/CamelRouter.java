@@ -55,11 +55,11 @@ public class CamelRouter extends RouteBuilder {
             .multicast(new FlightAggregationStrategy())
             .parallelProcessing()
 
-            //
+            
             // COMMENT OUT THIS
             //.to("direct:arrivalsImplLocal", "direct:departuresImplLocal");
 
-            //
+            
             // UNCOMMENT THIS
             .to("direct:arrivalsImplRemote", "direct:departuresImplRemote");
     
